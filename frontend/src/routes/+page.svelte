@@ -6,6 +6,8 @@
     let result = "Please enter your name below 👇";
     let time = "Listening for Time event...";
 
+    let openCount = 0;
+
     const doGreet = () => {
         let localName = name;
         if (!localName) {
@@ -21,6 +23,7 @@
     };
 
     const settings = async () => {
+        openCount = openCount + 1;
         await GreetService.OpenSettings();
     };
 
@@ -55,6 +58,7 @@
     <div class="footer">
         <div><p>Click on the Wails logo to learn more</p></div>
         <div><p>{time}</p></div>
+        <div><p>Settings page has been opened {openCount} times!</p></div>
     </div>
 </div>
 
