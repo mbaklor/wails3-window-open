@@ -12,7 +12,7 @@ func (g *GreetService) OpenSettings() {
 	app := application.Get()
 	app.NewWebviewWindowWithOptions(application.WebviewWindowOptions{
 		Title:            "Settings",
-		URL:              "/settings/",
+		URL:              "/settings",
 		BackgroundColour: application.NewRGB(27, 38, 54),
 	})
 }
